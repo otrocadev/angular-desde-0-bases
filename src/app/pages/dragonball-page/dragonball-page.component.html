@@ -10,10 +10,14 @@
   </div>
   <div class="col-12 col-sm-6">
     <ol>
-      <li>Goku</li>
-      <li>Gohan</li>
-      <li>Vegueta</li>
-      <li>Frieza</li>
+      @for (character of characters(); track $index) {
+        <li>
+          <span>
+            {{ character.name }}
+          </span>
+          <strong class="text-danger"> ({{ character.power }}) </strong>
+        </li>
+      }
     </ol>
   </div>
 </section>
