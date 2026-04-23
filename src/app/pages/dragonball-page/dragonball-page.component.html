@@ -15,7 +15,12 @@
           <span>
             {{ character.name }}
           </span>
-          <strong class="text-danger"> ({{ character.power }}) </strong>
+          <strong
+            [class.text-danger]="character.power > 9000"
+            class="text-danger"
+          >
+            ({{ character.power }})
+          </strong>
         </li>
       }
     </ol>
