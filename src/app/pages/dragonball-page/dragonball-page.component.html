@@ -11,17 +11,19 @@
   <div class="col-12 col-sm-6">
     <ol>
       @for (character of characters(); track $index) {
-        <li>
-          <span>
-            {{ character.name }}
-          </span>
-          <strong
-            [class.text-danger]="character.power > 9000"
-            class="text-danger"
-          >
-            ({{ character.power }})
-          </strong>
-        </li>
+        @if (character.power > 3000) {
+          <li>
+            <span>
+              {{ character.name }}
+            </span>
+            <strong
+              [class.text-danger]="character.power > 9000"
+              class="text-danger"
+            >
+              ({{ character.power }})
+            </strong>
+          </li>
+        }
       }
     </ol>
   </div>
